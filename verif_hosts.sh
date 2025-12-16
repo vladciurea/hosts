@@ -1,5 +1,5 @@
 #!/bin/bash
-
+$echo "Victor a zis 6 7"
 cat /etc/hosts | while read -r ip host oth; do
     [[ -z "$ip" || "$ip" == \#* ]] && continue
     lookup=$(nslookup "$host" 2>dev>null | grep "Adress: " | tail -n 1 | awk '{print $2}')
